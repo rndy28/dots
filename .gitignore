@@ -1,0 +1,21 @@
+## ignore all config
+.config/*
+plugged/**/
+
+## select specific config
+!bspwm/
+!sxhkd/
+!cava/
+!dunst/
+!htop/
+!kitty/
+!picom/
+!polybar/
+!rofi/
+!slop/
+!ranger/
+!btop/
+!bat/
+!zathura/
+!ranger/
+!nvim/
