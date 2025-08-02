@@ -62,14 +62,24 @@ XF86MonBrightnessDown
         brightnessctl s 1%- --device=intel_backlight && $HOME/.scripts/brightnessControl.sh down
 
 ## volume control ##
+XF86AudioRaiseVolume
+    pamixer -i 5
+
+XF86AudioLowerVolume
+    pamixer -d 5
+
 XF86AudioMute
-    pulseaudio-ctl mute
+    pamixer -t
 
-XF86AudioMicMute
-    pulseaudio-ctl mute-input
+## Knob Volume Control
+ 
+115
+    pamixer -i 5
 
-XF86Audio{Raise,Lower}Volume
-    pulseaudio-ctl {up,down} 2       
+114
+    pamixer -d 5
+
+
 
 # program launcher
 super + @space
