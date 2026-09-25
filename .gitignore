@@ -5,7 +5,7 @@ plugged/**/
 ## select specific config
 !bspwm/
 !sxhkd/
-!cava/
+!cava/config
 !dunst/
 !htop/
 !kitty/
@@ -19,3 +19,4 @@ plugged/**/
 !zathura/
 !ranger/
 !nvim/
+!fastfetch/

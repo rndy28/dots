@@ -1,18 +1,17 @@
-configuration{
-    modi: "run,drun,window";
-    icon-theme: "Oranchelo";
-    show-icons: true;
-    terminal: "alacritty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  Window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+configuration {
+  modes: "drun";
+  drun-display-format: "{name}";
+  scroll-method: 1;
+  disable-history: true;
+  cycle: false;
+  hover-select: true;
+  kb-page-prev: "Page_Up,Alt+u,ScrollUp";
+  kb-page-next: "Page_Down,Alt+d,ScrollDown";
+  ml-row-up: "";
+  ml-row-down: "";
+  me-select-entry: "";
+  me-accept-entry: "MousePrimary";
 }
 
-@theme "catppuccin-mocha"
 
+@theme "~/.config/rofi/nord.rasi"

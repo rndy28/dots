@@ -2,6 +2,8 @@ eval "$(zoxide init zsh --cmd cd)"
 
 zstyle ':omz:update' mode disabled
 
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.local/share/gem/"
@@ -12,7 +14,7 @@ export CHROME_EXECUTABLE=/usr/bin/brave
 export ZSH="$HOME/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=30
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:#DBE2EF;secondary:#A7C5EB;accent:#F4F4F2;info_negative:#FC5185;info_positive:#8CEA71;info_neutral_1:#FF9580;info_neutral_2:#FFFF80;info_special:#80FFEA"
-export TYPEWRITTEN_SYMBOL="魂"
+export TYPEWRITTEN_SYMBOL="🥸"
 export TYPEWRITTEN_ARROW_SYMBOL="➜"
 export TYPEWRITTEN_CURSOR="underscore"
 export PF_INFO="title os wm editor uptime memory"
@@ -61,9 +63,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
-PATH=~/.console-ninja/.bin:$PATH
 # pnpm
 export PNPM_HOME="/home/rndy/.local/share/pnpm"
 case ":$PATH:" in
@@ -71,3 +71,14 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# bun completions
+[ -s "/home/ren/.bun/_bun" ] && source "/home/ren/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# opencode
+export PATH=/home/ren/.opencode/bin:$PATH

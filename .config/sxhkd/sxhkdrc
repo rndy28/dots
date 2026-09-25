@@ -13,13 +13,13 @@ alt + k
 super + shift + b
        brave 
 
+# launch dbeaver
+super + shift + d
+	env GTK_THEME=Adwaita dbeaver
+
 # launch vscode
 super + shift + c
         code
-
-# launch discord
-super + shift + d
-        discord
 
 # launch file manager
 super + shift + r
@@ -28,14 +28,6 @@ super + shift + r
 ## cava
 alt + v
       $HOME/.config/sxhkd/scripts/draw-cava.sh
-
-## htop
-alt + h
-      $HOME/.config/sxhkd/scripts/draw-htop.sh
-
-## unimatrix
-alt + u
-      $HOME/.config/sxhkd/scripts/draw-unimatrix.sh
 
 ## ranger
 alt + r
@@ -47,11 +39,11 @@ super + shift + p
          polybar-msg cmd toggle; bspc config top_padding 70 }
 
 ## screenshot fullscreen
-End
+super + shift + s
       scrot $HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
 
 ## screenshot focused window only
-Home
+super + shift + w
       scrot -u $HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
 
 ## brightness control ##
@@ -83,7 +75,7 @@ XF86AudioMute
 
 # program launcher
 super + @space
-	rofi -show drun
+	~/.config/rofi/launch.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
